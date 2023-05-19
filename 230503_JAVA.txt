@@ -1,0 +1,56 @@
+# 개발 환경 셋팅
+
+  1. JDK(Java Development Kit) : 자바를 개발하고, 컴파일, 빌드, 모든 프로그램
+	LTS : 기술지원이 3년 되는 버젼
+	SUN ===========> Oracle (www.oracle.com)
+  	1.8(무료),    11   17   <== Oracle(유료), 11, 17   LTS
+
+
+	Open JDK     <== 무료
+
+
+	JDK는 JRE를 포함하고있고, 추가적으로 개발에 필요한 툴이 더 내장되어 있다.
+	    - JRE는 JVM 컴파일된 바이트 코드만 실행
+	JDK(client 개발)   <======================>  JRE
+
+      PATH 변수 설정	: 명령 프롬프트에서 모든 경로에서 해당 프로그램을 실행
+	- PATH 변수에 등록된 폴더는 모든 경로에서 해당 폴더의 프로그램을 실행
+	C:\Program Files\Java\jdk1.8.0_202\jre\bin
+		java.exe,   javac.exe
+
+
+      JAVA_HOME 변수 설정 : JDK 설치된 폴더를 지정, 
+	C:\Program Files\Java\jdk1.8.0_202
+
+  2.  이클립스(Eclipse) <== IDE(통합 개발 환경) : 개발을 쉽게 해주는 프로그램, 개발툴, 디버깅, 컴파일,
+	- IBM에서 만들었고, 무료로 사용할 수 있는 IDE
+	- Back-End 개발, 소기업, 중소기업
+	- https://www.eclipse.org/downloads/
+         인텔리제이 <==  BackEnd, Front-End, 커뮤니티 버젼(무료), 올리메이트(유료)
+	- 대기업, 카카오, 네이버
+
+  3. VS Code :     <== FrontEnd 개발
+
+
+플랫폼 : 
+     - Hardware 플랫폼 : 여러 종류의 CPU가 있다. 
+     - OS 플랫폼 : Unix, Windows, Linux
+
+
+C, C++ : 완전한 기계어로 컴파일이 된다.
+     -- 플랫폼마다 해당 플랫폼에 맞게 컴파일 해야한다.
+     -- 다른 플랫폼에 컴파일된 파일은 작동되지 않는다.
+
+
+
+
+JAVA는 완전한 기계어로 컴파일이 되는 것이 아니라 중간언어로 컴파일이된다	<=== byte 코드로 컴파일이 된다.
+	Hello.java(프로그램의 소스파일) <======== 컴파일 =======> Hello.class(중간언어로 컴파일)
+
+
+	JVM이 설치된 Windows, MAC, Linux 플랫폼에 종속적이지 않고 모든 곳에서 작동됨
+
+
+패키지(Package) : Java의 소스파일의 폴더 구조를 생성함.
+클래스(class)     : 개발시 자바의 소스파일을 생성
+   - 클래스이름의  첫 자는 반드시 영문 대문자.

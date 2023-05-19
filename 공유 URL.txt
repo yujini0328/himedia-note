@@ -1,0 +1,33 @@
+수업 공유
+https://url.kr/dzlx6f(읽기만 가능)
+암호 : himedia1234
+
+수업 내용 깃허브 주소
+https://github.com/hi20230425
+
+
+자기소개 업로드 주소
+https://url.kr/fk3usz
+
+Zoom ID : 867 248 2719
+암호 : 13
+
+
+
+1차 : Front-End - 제작할 주제 및 스토리 보드 작성 ( 완료 시간 : 5월 14일 (일요일) 저녁 9:00)
+       http://url.kr/v6dwla		<== upload URL
+	- 이름, 전화번호, github 주소(page), dothome 주소, AWS Linux VM(nginx)
+
+
+
+
+피그마 : 웹사이트의 스토리보드( Web APP, Mobile APP)  <== 사이트를 코딩 전
+노션 : 메모 프로그램(에버노트, 원노트), <==
+       -- 무료,
+       -- 유료(협업)
+
+AWS : EC2, 클라우드 계정, 전 세계의 아마존 DC(DataCenter), 무료(freeTier),
+	-- 구글 검색어 : AWS EC2 계정 생성
+  - https://aws.amazon.com/ko/free
+  - https://goddaehee.tistory.com/315
+
