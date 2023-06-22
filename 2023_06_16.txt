@@ -1,0 +1,28 @@
+ls -l
+sudo chown ubuntu.root html
+
+DNS(Domain Name System) : 영문으로 된 도메인 이름을 IP Address로 변환시켜 주는 서버
+	www.google.com ==========================> IP Address 
+			DNS Server(114 교환원, 네비게이션)
+	
+
+	www.naver.com
+	================
+	HostName + Domain Name	: FQDN(전체 컴퓨터이름)
+
+
+
+
+	-- 도메인을 전세계적으로 관리 : 
+		www.internic.org   ==>  Resisters(공인된 도메인 등록 업체)
+	-- AWS Rout53 : 신청한 도메인을 IP로 변환 시켜 주는 DNS Server	<===	PaaS Service 
+
+		www.gkn.kr	<========>	54.180.201.96
+
+====================================
+자신의 도메인을 사용해서 작동하기
+1. 도메인 등록 업체에서 원하는 도메인을 구매 : com, kr, co.kr (1년 :  2만원)
+2. AWS Route53 서비스에서 Zone(호스팅 영역) ==> 신청한 도메인을 등록(gkn.kr) ===> AWS DNS 위치를 알 수 있다. 
+3. 도메인 등록 업체 사이트에서 해당 도메인의 DNS 서버를 지정(Route 53)
+4. Route 53 A레코드 생성
+	www	gkn.kr	A	54.180.201.96
