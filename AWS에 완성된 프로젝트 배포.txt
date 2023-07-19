@@ -1,0 +1,29 @@
+AWS에 완성된 프로젝트 배포 : jsp ===> *.war
+
+1. war 파일로 export
+
+2. Oracle 설치 (테이블 생성되어 있어야 한다.)
+	SYSTEM 계정으로 접속
+	HR2 계정생성
+	HR2  계정으로 접속후 테이블 생성 : board, user, products
+
+3. JDK 11 설치
+	
+
+4. Tomcat 9.5 버전 : 80 포트를 사용
+	C:\Tomcat9-Pro\webapps\JSP_Study_MVC_M2.war
+	톰캣 서비스 시작( net start Tomcat9-Pro) 	<== 압축이 풀림
+	C:\Tomcat9-Pro\webapps\ROOT		<== localhost
+
+5. Local *.war ===> Remote 서버로 전송
+
+6. AWS 방화벽
+	원격 접속 : TCP 3389
+	웹서버	 : TCP 80
+	SSH	 : TCP 22
+	Oracle Server : TCP 1521
+
+Local Tocat 9 설치후 war 파일 배포 : TCP 10000 포트
+ - Oracle 설치, 테이블 생성되어 있음.
+ - JDK 11 설치 되어 있음.
+ - C:\Tomcat9-Pro\webapps

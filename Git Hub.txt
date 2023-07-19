@@ -1,0 +1,165 @@
+https://github.com/yujini0328/Java_Proj.git
+# GIT 명령어
+
+
+기본 브랜치(Default Branch) : main
+     - GitHub(MS) :   master  ----> main
+     - Git	    : 설치시에 기본 브랜치 이름 : main	
+
+Commit <== 특정 시점의 내용을 백업, 그 시점으로 되돌릴 수 있다. 
+     - 하나의 기능이 완성되었을때, 
+     - "기능명_날짜_누가"   <== 커밋의 설명을 넣어줘야 그 상태로 돌아갈 수 있다.
+
+스테이지(Stage) 영역 : Commit할 데이터를 위치 시키는 영역
+레파지토리(Repository) 영역 : Commit된 데이터가 위치하는 영역
+
+
+
+# 1. 깃을 초기화하는 명령어 : 해당 폴더에서 git으로 컨트롤하겠다.
+	- 버젼을 관리할 폴더에서 선언 
+	- .git : Local Repository  <== Commit한 정보가 저장
+$ git init
+
+
+# 2. 글로벌 설정 : git을 설치 한번만 셋팅, 사용자명, 사용자 메일 주소
+      - git 설치후, 1번만 셋팅
+
+
+$ git coonfig --global user.name "자신의영문이름"
+$ git coonfig --global user.email "자신의 메일주소"
+
+
+# 3. 스테이징(Staging) 영역에 모든 파일을 추가(Working Directory ===> Stage Area)
+$ git add .     <= 현재 폴더의 모든 파일을 스테이징 영역에 등록
+
+   -- 스테이징 영역에 등록된 파일을 보는 명령어
+   $ git status 
+     -- 초록색 : 스테이지 영역에 등록된 파일 
+     -- 빨간색 : 스테이지 영역에 등록되지 않는 파일
+     
+# 4. 로컬 레파지토리에 백업파일을 생성 : commit   <==stage 영역에 등록된 파일만 커밋
+$ git commit -m "로그인 기능완성_2023_4_28_Yujin_Kim"
+
+
+   -- 커밋된 정보를 보는 명령어 
+      $ git log
+
+
+
+# 5. 로컬 레파지토리의 정보를 원격 레파지토리에 전송하기 위해서 origin 변수에 GitHub에 원격 레파지토리 주소를 등록
+	: git remote add origin "원격 레파지토리주소"
+$ git remote add origin "https://github.com/yujini0328/project1.git"
+
+
+
+# 6. 로컬 레파지토리의 내용을 원격 레파지토리로 전송 : git push
+$ git push origin main		<== 로컬의 main 브랜치의 커밋된 내용을 원격 레파지토리로 전송
+
+=============================================================================
+# GitHub에 계정 만들기
+  - github.com
+
+# 레파지토리(Repository) 생성, (로그인)
+  - github.com/new
+
+============================================================================
+# 경로의 파일을 github에 올리기 : /c/git/Sample_web
+1. 깃 초기화하기
+$ git init 
+
+2. 로컬의 작업 디렉토리의 모든 파일을 stage 영역에 올림.
+$ git add . 
+
+3. 스테이지 영역에 등록된 파일을 commit(Local Repository에 등록)
+$ git commit -m "Front-Enet 첫 번째 commit_2023-04_28"
+
+
+4. gitHub에서 원격 레파지토리 생성(github.com/new) : 레파지토리 이름, public
+	https://github.com/yujini0328/web.git
+
+
+5. origin 변수에 : 원격 레파지토리 등록
+	$ git remote add origin "gitHub의 원격 레파지토리 등록"
+
+6. 로컬 레파지토리의 commit 정보를 원격(gitHub) 레파지토리(origin)에 전송 
+	$ git push origin main
+
+7. github pages를 사용해서 웹서버를 구동해서 글로벌하게 서비스 : Front-End : HTML, CSS, JavaScript 
+   해당프로젝트 ===> settings ===> pages ==> main(브랜치선택) ==> save(클릭)
+   2분뒤 :    https://hi2023042.github.io/web/
+
+
+<실습> web2, web3, web4, web5   <== GitHub 프로젝트에 전송 후 github Pages를 사용해서 글로벌하게 출력    
+
+# README.md, .gitignore 파일
+  -- README.md	: GitGub에서 프로젝트의 설명을 넣는 파일
+  -- gitignore.io	: 로컬 레파지토리의 불필요한 파일을 서버로 전송하지 않도록 설정
+	-- 개발시 컴파일된 파일, 설정 파일
+	-- gitignore.io
+		운영체제 개발환경(IDE) 프로그래밍언어       <==
+		Windows   Eclipse  Java		       <== Local Repository에는 존재하지만 GitHub에는 전송할 필요가 없는 파일을 자동으로 만들어준다. 	
+
+# git clone : 원격의 github의 공개된 레파지토리의 모든 내용을 자신의 시스템을 복사
+$ git clone "원격레파지토리주소"
+
+
+
+# 학원 : Host OS(Windows 10)	
+   1. git 설치 ==> GitHub 로드했음.
+
+   2. 집에서 push한 파일을 pull해서 가져와야한다.    pull   : 원격 레파지토리의 변경된 내용을 Local 시스템으로 가지고 온다.
+
+   3. 주의 : pull을 반드시 먼저 실행 후 로컬의 내용을 커밋하고 push     <== 
+	$ git pull origin main    
+
+# 집 : VM(Windows 11)
+   -- 크롬 설치
+   -- git 설치(git-scm.com)
+
+   1. 원격 레파지토리의 전체 프로젝트 파일을 로컬 컴퓨터로 클론
+     $ git clone "https://github.com/yujini0328/web.git"
+
+   2. 집의 시스템에서 새로운 파일을 생성 후 gitHub로 전송시 commit ==> push
+
+   3. 주의 : pull을 반드시 먼저 실행 후 로컬의 내용을 커밋하고 push     <== 
+	$ git pull origin main
+
+# origin 변수의 값을 확인
+$ git remote	<== 변수출력
+$ git remote add origin "원격레파지토리주소"		<== 등록 
+$ git remote show origin     <== origin 변수의 값을 출력
+$ git remote remove origin  <== origin 변수에 등록된 값을 삭제
+
+
+=============================================================================
+# GitHub에서 초기화된 경우 : .git	<== Repository(커밋된 정보를 저장)
+  it_test2     <== GitHub에서 초기화된 경우 : .git       <== 깃허브에서 커밋이 적용되어 있다.
+  - README.md
+  - .ignore
+  - 깃라이센스
+
+  인경우 Local Repository에서 Clone으로 동기화 해야함.
+  git clone "원격레파지토리 주소"	<== origin 변수에 레파지토리 주소가 자동으로 저장
+
+
+# GitHub에서 초기화가 안된경우 : 1. 레파지토리이름, 2. public / private 두가지만 설정해서 만든 경우 
+  it_test2
+
+  로컬에서 초기화시키고, 커밋하고, push를 사용해서 업로드
+  1. git init	<== .git
+  2. git add.	<== 현재 폴더의 모든 파일을 stage 영역에 등록
+  3. git commit -m "첫 번째 커밋입니다"	<== stage에 등록된 파일을 커밋(백업)
+  4. git remote add origin "원격레파지토리주소"		<== origin 변수에 원격 레파지토리 주소를 저장함
+  5. git push origin main                       <== main 브렌치의 내용을 원격 gitHub에 전송
+ 
+
+## Local 시스템에서 수정(변경) 사항이 생긴 경우
+  -- 커밋(Local) ==> Push  (remote)
+
+## Remote에서 수정(변경) 사항이 발생된 경우
+  -- 커밋(Remote)  ==> pull(local)
+
+
+  
+
+

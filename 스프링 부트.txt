@@ -1,0 +1,6 @@
+스프링 부트 만들때 요소
+- H2 Database
+- Lombok
+- Spring boot DevTools
+- Spring Date JPA
+- Spring Web

@@ -1,0 +1,21 @@
+AWS 에서 인스턴스(VM) 배포 ===> 웹서버.
+	- Local (개발된 파일) ========> Remote(웹서버)	: SFTP(TCP 22), git
+
+  - Windows Server 2022(IIS) : RDP(원격관리, TCP 3389)
+      - IIS 설치 : TCP80(AWS 방화벽)
+	C:Winepub\wwwroot	<== 개발된 페이지 업로드 위치
+		index.html
+      - SSH 설치
+      - git 설치 : TCP 22(AWS 방화벽)
+
+  - Linux Ubuntu(Nginx) : 기본적으로 SSH 기본설치되어 있음.(TCP 22), SFTP(TCP 22)
+     - Nginx     (AWS 방화벽 : TCP 80)
+	/var/www/html	<== 개발된 페이지를 업로드 위치(Ubuntu)
+	cd/var/www
+	sudo chown ubuntu.root html	<== 로그온한 계정이 html를 수정할 수 있도록 권한을 부여
+	
+     - git 설치 (sudo apt install git)
+	-- git config --global user.name "자신이름"
+	-- git config --global user.email "자신의 메일 주소"
+	-- git clone "원격 레파지토리주소"
+
